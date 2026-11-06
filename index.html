@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KanbanBoard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <h1>Board</h1>
+    <span id="stats" class="stats"></span>
+    <div class="actions">
+      <button id="undo" type="button" title="Undo (Ctrl+Z)">Undo</button>
+      <button id="redo" type="button" title="Redo (Ctrl+Shift+Z)">Redo</button>
+      <button id="reset" type="button" class="ghost">Reset</button>
+    </div>
+  </header>
+  <p class="hint">Drag cards between columns. With the keyboard: focus a card, then <kbd>Alt</kbd>+arrows to move it, <kbd>Enter</kbd> to edit, <kbd>Del</kbd> to remove.</p>
+  <main id="board" class="board"></main>
+  <div id="live" class="sr-only" role="status" aria-live="polite"></div>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
